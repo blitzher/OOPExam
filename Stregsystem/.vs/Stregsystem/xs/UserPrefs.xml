@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{778132BC-58B0-4290-8AD0-BF4B8CEAB442}|Default">
+  <MonoDevelop.Ide.ItemProperties.Stregsystem PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Stregsystem/Program.cs">
+    <Files>
+      <File FileName="Stregsystem/Program.cs" Line="29" Column="17" />
+      <File FileName="Stregsystem/User.cs" />
+      <File FileName="Stregsystem/Product.cs" />
+      <File FileName="Stregsystem/SeasonalProduct.cs" />
+      <File FileName="Stregsystem/InsertCashTransaction.cs" />
+      <File FileName="Stregsystem/InsufficientCreditsException.cs" />
+      <File FileName="Stregsystem/OutOfSeasonException.cs" />
+      <File FileName="Stregsystem/Logger.cs" />
+      <File FileName="Stregsystem/Stregsystem.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Stregsystem" expanded="True">
+            <Node name="Stregsystem" expanded="True">
+              <Node name="Transaction.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
