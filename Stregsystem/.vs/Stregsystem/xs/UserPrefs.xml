@@ -2,22 +2,24 @@
   <MonoDevelop.Ide.ItemProperties.Stregsystem PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Stregsystem/Program.cs">
     <Files>
-      <File FileName="Stregsystem/Program.cs" Line="29" Column="17" />
-      <File FileName="Stregsystem/User.cs" />
-      <File FileName="Stregsystem/Product.cs" />
-      <File FileName="Stregsystem/SeasonalProduct.cs" />
-      <File FileName="Stregsystem/InsertCashTransaction.cs" />
-      <File FileName="Stregsystem/InsufficientCreditsException.cs" />
-      <File FileName="Stregsystem/OutOfSeasonException.cs" />
-      <File FileName="Stregsystem/Logger.cs" />
-      <File FileName="Stregsystem/Stregsystem.cs" />
+      <File FileName="Stregsystem/Program.cs" Line="12" Column="1" />
+      <File FileName="Stregsystem/User.cs" Line="30" Column="72" />
+      <File FileName="Stregsystem/Product.cs" Line="9" Column="30" />
+      <File FileName="Stregsystem/Stregsystem.cs" Line="19" Column="82" />
+      <File FileName="Stregsystem/Transaction.cs" Line="1" Column="1" />
+      <File FileName="Stregsystem/BuyTransaction.cs" />
+      <File FileName="Stregsystem/SeasonalProduct.cs" Line="12" Column="30" />
+      <File FileName="Stregsystem/Logger.cs" Line="36" Column="34" />
+      <File FileName="Stregsystem/DatabaseLoader.cs" Line="31" Column="39" NotebookId="1" />
+      <File FileName="Stregsystem/users.csv" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Stregsystem/products.csv" Line="41" Column="31" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Stregsystem" expanded="True">
             <Node name="Stregsystem" expanded="True">
-              <Node name="Transaction.cs" selected="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>

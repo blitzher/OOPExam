@@ -2,7 +2,7 @@
 {
     class InsertCashTransaction : Transaction
     {
-
+        
         
         public InsertCashTransaction(User actor) : base(actor)
         {

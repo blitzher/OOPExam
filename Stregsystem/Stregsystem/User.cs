@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace Stregsystem
 {
@@ -14,9 +15,20 @@ namespace Stregsystem
         private decimal _balance;
         public decimal Balance { get { return (_balance); } }
 
-        public User()
+        public User(string userName, string email)
         {
 
+            Regex unameRegex = new Regex(@"[0-9a-z_]+");
+            Regex emailRegex = new Regex(@"([0-9a-z_.-]+)@([\w][\w.-]+\.[\w]{2,})");
+
+            if (!unameRegex.IsMatch(userName))
+            {
+                throw new ArgumentException($"Invalid username: {userName}");
+            }
+            if (!emailRegex.IsMatch(email))
+            {
+                throw new ArgumentException($"Invalid email: {email}");
+            }
         }
 
         public void AddBalance(decimal amount)

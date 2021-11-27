@@ -4,19 +4,20 @@ namespace Stregsystem
 {
     class SeasonalProduct : Product
     {
+        /* Never specified when the season start time should be used */
         public DateTime SeasonStartTime;
+
         public DateTime SeasonEndTime;
 
+        private bool _active;
         public new bool Active
         {
             get
             {
-                TimeSpan dt = SeasonEndTime - DateTime.Now;
-                return dt.TotalSeconds > 0;
+                if (SeasonEndTime != DateTime.MaxValue)
+                    return DateTime.Now < ExpirationDate;
+                return _active;
             }
         }
     }
-
-  
-
 }

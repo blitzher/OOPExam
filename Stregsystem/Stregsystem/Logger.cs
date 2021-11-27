@@ -8,9 +8,9 @@ namespace Stregsystem
     {
 
         /* Store loggers in dictionary, such that no two loggers
-         * are using the same filestream, and any object can 
-         * write to the logger it is suited for. */
-        private static Dictionary<string, Logger> ExistingLoggers;
+         * are trying to access the same filestream, and any object  
+         * can write to the logger it is suited for. */
+        private static Dictionary<string, Logger> ExistingLoggers = new Dictionary<string, Logger>();
 
         private StreamWriter stream;
 
@@ -20,8 +20,21 @@ namespace Stregsystem
          * static method, GetLogger, see below. */
         private Logger(string Name)
         {
-            fileStream = File.Create(Path.Combine("Logs", Name));
+            if (!Directory.Exists("Logs"))
+            {
+                Directory.CreateDirectory("Logs");
+            }
+            fileStream = File.Create(Path.Combine("Logs", Name + ".log"));
             stream = new StreamWriter(fileStream);
+            ExistingLoggers.Add(Name, this);
+        }
+
+        public static void DisposeAll()
+        {
+            foreach(Logger logger in ExistingLoggers.Values)
+            {
+                logger.Dispose();
+            }
         }
 
         private void Dispose()
@@ -31,8 +44,10 @@ namespace Stregsystem
         }
 
         private void Write(string symbol, string Text)
-        {   
-            stream.Write(string.Format("{0} ({1}) {2}", symbol, DateTime.Now, Text));
+        {
+            string output = string.Format("{0} ({1}) {2}", symbol, DateTime.Now, Text);
+            stream.Write(output);
+            Console.WriteLine(output);
         }
 
         public void Log(string Text)
@@ -41,6 +56,11 @@ namespace Stregsystem
         }
 
         public void Error(string Text)
+        {
+            Write("[X]", Text);
+        }
+
+        public void Warn(string Text)
         {
             Write("[!]", Text);
         }
