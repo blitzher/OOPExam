@@ -1,0 +1,17 @@
+/Users/skovborg/Documents/OOPExam/Stregsystem/Stregsystem/obj/Debug/net5.0/Stregsystem.csproj.AssemblyReference.cache
+/Users/skovborg/Documents/OOPExam/Stregsystem/Stregsystem/obj/Debug/net5.0/Stregsystem.GeneratedMSBuildEditorConfig.editorconfig
+/Users/skovborg/Documents/OOPExam/Stregsystem/Stregsystem/obj/Debug/net5.0/Stregsystem.AssemblyInfoInputs.cache
+/Users/skovborg/Documents/OOPExam/Stregsystem/Stregsystem/obj/Debug/net5.0/Stregsystem.AssemblyInfo.cs
+/Users/skovborg/Documents/OOPExam/Stregsystem/Stregsystem/obj/Debug/net5.0/Stregsystem.csproj.CoreCompileInputs.cache
+/Users/skovborg/Documents/OOPExam/Stregsystem/Stregsystem/bin/Debug/net5.0/Stregsystem.deps.json
+/Users/skovborg/Documents/OOPExam/Stregsystem/Stregsystem/bin/Debug/net5.0/Stregsystem.runtimeconfig.json
+/Users/skovborg/Documents/OOPExam/Stregsystem/Stregsystem/bin/Debug/net5.0/Stregsystem.runtimeconfig.dev.json
+/Users/skovborg/Documents/OOPExam/Stregsystem/Stregsystem/bin/Debug/net5.0/Stregsystem.dll
+/Users/skovborg/Documents/OOPExam/Stregsystem/Stregsystem/bin/Debug/net5.0/ref/Stregsystem.dll
+/Users/skovborg/Documents/OOPExam/Stregsystem/Stregsystem/bin/Debug/net5.0/Stregsystem.pdb
+/Users/skovborg/Documents/OOPExam/Stregsystem/Stregsystem/obj/Debug/net5.0/Stregsystem.dll
+/Users/skovborg/Documents/OOPExam/Stregsystem/Stregsystem/obj/Debug/net5.0/ref/Stregsystem.dll
+/Users/skovborg/Documents/OOPExam/Stregsystem/Stregsystem/obj/Debug/net5.0/Stregsystem.pdb
+/Users/skovborg/Documents/OOPExam/Stregsystem/Stregsystem/obj/Debug/net5.0/Stregsystem.genruntimeconfig.cache
+/Users/skovborg/Documents/OOPExam/Stregsystem/Stregsystem/bin/Debug/net5.0/products.csv
+/Users/skovborg/Documents/OOPExam/Stregsystem/Stregsystem/bin/Debug/net5.0/users.csv

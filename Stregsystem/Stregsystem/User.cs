@@ -29,6 +29,9 @@ namespace Stregsystem
             {
                 throw new ArgumentException($"Invalid email: {email}");
             }
+
+            UserName = userName;
+            Email = email;
         }
 
         public void AddBalance(decimal amount)

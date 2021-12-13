@@ -3,6 +3,12 @@ using System.Collections.Generic;
 
 namespace Stregsystem
 {
+    class UserBalanceNotification : EventArgs
+    {
+        public decimal Balance;
+        public string Username;
+    }
+
     partial class Stregsystem
     {
         public List<Product> Products = new List<Product>();
@@ -39,6 +45,13 @@ namespace Stregsystem
 
             if (transaction.Actor.Balance <= 100)
             {
+                EventHandler<UserBalanceNotification> handler = UserBalanceWarning;
+                handler?.Invoke(this, new UserBalanceNotification()
+                {
+                    Balance = transaction.Actor.Balance,
+                    Username = transaction.Actor.UserName
+                });
+
                 Logger.GetLogger("Transactions")
                     .Warn($"Low balance on account: " +
                     $"{transaction.Actor.UserName}");
@@ -108,6 +121,8 @@ namespace Stregsystem
             return activeProducts;
 
         }
+
+        public event EventHandler<UserBalanceNotification> UserBalanceWarning;
     }
 
 

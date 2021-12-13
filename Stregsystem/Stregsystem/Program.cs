@@ -10,7 +10,9 @@ namespace Stregsystem
 
             Stregsystem system = new Stregsystem();
 
-            Logger.DisposeAll();
+            StregsystemCLI cli = new StregsystemCLI(system);
+
+            cli.Start();
         }
 
     }
