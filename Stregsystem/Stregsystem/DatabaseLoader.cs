@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace Stregsystem
 {
@@ -36,7 +37,7 @@ namespace Stregsystem
                 products.Add(new Product()
                 {
                     Id = int.Parse(arguments[0]),
-                    Name = arguments[1].Trim('"'),
+                    Name = Regex.Replace(arguments[1].Trim('"'), "<.*?>", String.Empty),
                     Price = decimal.Parse(arguments[2]),
                     Active = active,
                 });

@@ -12,7 +12,7 @@ namespace Stregsystem
         public int Id { get { return _id; } }
         public User Actor;
         public DateTime Date;
-        public Decimal Amount;
+        public decimal Amount;
 
         public Transaction(User actor)
         {
@@ -27,9 +27,6 @@ namespace Stregsystem
             Amount = amount;
         }
 
-        /* Ensure that a transaction doesn't get executed multiple times. 
-         * Useful in more asynchronous contexts, but good practice */
-        private bool Idempotent = false;
 
         public override string ToString()
         {

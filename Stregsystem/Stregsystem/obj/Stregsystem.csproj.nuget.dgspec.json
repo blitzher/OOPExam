@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/skovborg/Documents/OOPExam/Stregsystem/Stregsystem/Stregsystem.csproj": {}
+    "C:\\Users\\skovborg\\Documents\\projects\\OOPExam\\Stregsystem\\Stregsystem\\Stregsystem.csproj": {}
   },
   "projects": {
-    "/Users/skovborg/Documents/OOPExam/Stregsystem/Stregsystem/Stregsystem.csproj": {
+    "C:\\Users\\skovborg\\Documents\\projects\\OOPExam\\Stregsystem\\Stregsystem\\Stregsystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/skovborg/Documents/OOPExam/Stregsystem/Stregsystem/Stregsystem.csproj",
+        "projectUniqueName": "C:\\Users\\skovborg\\Documents\\projects\\OOPExam\\Stregsystem\\Stregsystem\\Stregsystem.csproj",
         "projectName": "Stregsystem",
-        "projectPath": "/Users/skovborg/Documents/OOPExam/Stregsystem/Stregsystem/Stregsystem.csproj",
-        "packagesPath": "/Users/skovborg/.nuget/packages/",
-        "outputPath": "/Users/skovborg/Documents/OOPExam/Stregsystem/Stregsystem/obj/",
+        "projectPath": "C:\\Users\\skovborg\\Documents\\projects\\OOPExam\\Stregsystem\\Stregsystem\\Stregsystem.csproj",
+        "packagesPath": "C:\\Users\\skovborg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\skovborg\\Documents\\projects\\OOPExam\\Stregsystem\\Stregsystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/skovborg/.config/NuGet/NuGet.Config"
+          "C:\\Users\\skovborg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

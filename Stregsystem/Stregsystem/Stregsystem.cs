@@ -3,18 +3,20 @@ using System.Collections.Generic;
 
 namespace Stregsystem
 {
-    class UserBalanceNotification : EventArgs
-    {
-        public decimal Balance;
-        public string Username;
-    }
-
     partial class Stregsystem
     {
         public List<Product> Products = new List<Product>();
         public List<User> Users = new List<User>();
         public List<Transaction> Transactions = new List<Transaction>();
         public Logger SystemLogger;
+
+        public delegate void LowBalanceEventHandler(object sender, LowBalanceEventArgs e);
+        public event LowBalanceEventHandler LowBalanceEvent;
+
+        private void RaiseLowBalanceEvent(User user)
+        {
+            LowBalanceEvent?.Invoke(this, new LowBalanceEventArgs(user, user.Balance));
+        }
 
         public Stregsystem()
         {
@@ -43,18 +45,9 @@ namespace Stregsystem
             /* Each transaction itself takes care of logging */
             transaction.Execute();
 
-            if (transaction.Actor.Balance <= 100)
+            if (transaction.Actor.Balance <= 0)
             {
-                EventHandler<UserBalanceNotification> handler = UserBalanceWarning;
-                handler?.Invoke(this, new UserBalanceNotification()
-                {
-                    Balance = transaction.Actor.Balance,
-                    Username = transaction.Actor.UserName
-                });
-
-                Logger.GetLogger("Transactions")
-                    .Warn($"Low balance on account: " +
-                    $"{transaction.Actor.UserName}");
+                RaiseLowBalanceEvent(transaction.Actor);
             }
 
         }
@@ -68,7 +61,7 @@ namespace Stregsystem
                 if (product.Id == id)
                     return product;
             }
-            throw new ArgumentOutOfRangeException($"No product of Id ({id}) found!");
+            return null;
         }
 
         public List<User> GetUsers(Func<User, bool> predicate)
@@ -90,7 +83,7 @@ namespace Stregsystem
                     return user;
             }
 
-            throw new ArgumentOutOfRangeException($"No user with UserName ({userName}) found!");
+            return null;
         }
 
         public List<Transaction> GetTransactions(User user, int amount)
@@ -121,8 +114,6 @@ namespace Stregsystem
             return activeProducts;
 
         }
-
-        public event EventHandler<UserBalanceNotification> UserBalanceWarning;
     }
 
 

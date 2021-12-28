@@ -26,8 +26,8 @@
 
         public override string ToString()
         {
-            return string.Format("Purchase {0} for user {1} {2}DKK at {3} of item {4}",
-                                    Id, Actor, Amount, Date, PurchasedProduct);
+            return string.Format("Purchase {0} for user {1} at {2} of item {3}",
+                                    Id, Actor, Date, PurchasedProduct);
         }
 
     }

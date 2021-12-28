@@ -46,8 +46,7 @@ namespace Stregsystem
         private void Write(string symbol, string Text)
         {
             string output = string.Format("{0} ({1}) {2}", symbol, DateTime.Now, Text);
-            stream.Write(output);
-            Console.WriteLine(output);
+            stream.WriteLine(output);
         }
 
         public void Log(string Text)
